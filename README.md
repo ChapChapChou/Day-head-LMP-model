@@ -12,8 +12,8 @@ Day-head-LMP-model/
 |   ├── hybrid_predication.py      # predict low-freq and high-freq and combine
 |   └── use_hybrid_predication.py  # entry programm 
 └── dataset/
-├── hourly_metered_load.csv    # load series
-└── pjm_data_COMED.csv         # pjm lmp date (where 'zone'== 'COMED')
+├── hourly_metered_load.csv        # load series
+└── pjm_data_COMED.csv             # pjm lmp date (where 'zone'== 'COMED')
 ```
 
 ## `src/get_lmp.py`
