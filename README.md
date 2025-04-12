@@ -58,26 +58,28 @@ This Jupyter Notebook processes the retrieved data. The workflow includes:
 4.  **Model Analysis:** Analyzing the separated components using different models.
 5.  **Price Prediction Synthesis:** Synthesizing the predictions to obtain the final predicted LMP.
 
-## Model Pick  
-
-Generally we get multiple choices for low-freq series and high-freq series:
-
-### Low-freq  
-1. PSO-LVSVM (picked)
-2. LSTM
-3. Prophet
-4. GBDT
-   
-### High-freq
-1. ARIMA (picked)
-2. Garch
-
 ## `dataset/`
 
 This directory contains the datasets used in the project:
 
 -   `hourly_metered_load.csv`: Hourly metered load data.
 -   `pjm_data_COMED.csv`: LMP data for the COMED zone.
+
+## Model Pick  
+
+Generally we get multiple choices for low-freq series and high-freq series:
+
+### Low-freq 
+
+1. PSO-LVSVM (picked)
+2. LSTM
+3. Prophet
+4. GBDT
+   
+### High-freq
+
+1. ARIMA (picked)
+2. GARCH
 
 ## Dependencies
 
