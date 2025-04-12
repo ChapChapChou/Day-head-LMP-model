@@ -7,8 +7,10 @@ It leverages the PJM public API, facilitated by the `pjm_dataminer` library (htt
 ```
 Day-head-LMP-model/
 ├── src/
-│   ├── get_lmp.py             # download data from PJM
-│   └── data_process.ipynb     # use model to predict
+│   ├── get_lmp.py                 # download data from PJM
+│   ├── data_process.ipynb         # use model to predict
+|   ├── hybrid_predication.py      # predict low-freq and high-freq and combine
+|   └── use_hybrid_predication.py  # entry programm 
 └── dataset/
 ├── hourly_metered_load.csv    # load series
 └── pjm_data_COMED.csv         # pjm lmp date (where 'zone'== 'COMED')
@@ -56,6 +58,20 @@ This Jupyter Notebook processes the retrieved data. The workflow includes:
 4.  **Model Analysis:** Analyzing the separated components using different models.
 5.  **Price Prediction Synthesis:** Synthesizing the predictions to obtain the final predicted LMP.
 
+## Model Pick  
+
+Generally we get multiple choices for low-freq series and high-freq series:
+
+### Low-freq  
+1. PSO-LVSVM (picked)
+2. LSTM
+3. Prophet
+4. GBDT
+   
+### High-freq
+1. ARIMA (picked)
+2. Garch
+
 ## `dataset/`
 
 This directory contains the datasets used in the project:
@@ -65,7 +81,7 @@ This directory contains the datasets used in the project:
 
 ## Dependencies
 
-* python 3.6+
+* python 3.13+
 * pandas
 * numpy
 * requests
